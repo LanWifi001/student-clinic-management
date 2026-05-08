@@ -36,19 +36,14 @@ Follow these steps to get the project running on your local machine:
 
 ### 1. Prerequisites
 Ensure you have the following installed:
+- PHP (8.2 or higher)
+- Composer
+- Node.js & NPM
+- MySQL (via XAMPP, Laragon, or Docker)
 
-PHP (8.2 or higher)
-
-Composer
-
-Node.js & NPM
-
-MySQL (via XAMPP, Laragon, or Docker)
-
-2. Clone and Install Dependencies
+### 2. Clone and Install Dependencies
 Open your terminal or command prompt and run:
 
-Bash
 # 1. Clone the repository
 git clone https://github.com/YOUR_USERNAME/YOUR_PROJECT_NAME.git
 
