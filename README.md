@@ -43,61 +43,42 @@ Ensure you have the following installed:
 
 ### 2. Clone and Install Dependencies
 Open your terminal or command prompt and run:
+1. Clone the repository
+    git clone https://github.com/YOUR_USERNAME/YOUR_PROJECT_NAME.git
+2. Enter the project folder
+    cd YOUR_PROJECT_NAME
+3. Install PHP dependencies
+    composer install
+4. Install Frontend dependencies
+    npm install
 
-# 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/YOUR_PROJECT_NAME.git
+### 3. Environment Configuration
+1. Locate the .env.example file in the root directory.
+2. Duplicate it and rename the copy to .env.
+3. Open .env and update your database credentials:
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=your_db_name
+    DB_USERNAME=root
+    DB_PASSWORD=
+4. Generate your unique application key:
+    php artisan key:generate
 
-# 2. Enter the project folder
-cd YOUR_PROJECT_NAME
-
-# 3. Install PHP dependencies
-composer install
-
-# 4. Install Frontend dependencies
-npm install
-3. Environment Configuration
-Locate the .env.example file in the root directory.
-
-Duplicate it and rename the copy to .env.
-
-Open .env and update your database credentials:
-
-Plaintext
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=your_db_name
-DB_USERNAME=root
-DB_PASSWORD=
-Generate your unique application key:
-
-Bash
-php artisan key:generate
-4. Database Setup
+### 4. Database Setup
 Ensure your MySQL server is running, then run the migrations and seeders to create the tables and default users:
-
-Bash
-php artisan migrate --seed
-5. Launching the Application
+    php artisan migrate --seed
+    
+### 5. Launching the Application
 You need two terminal windows running for the app to function correctly:
+- Terminal 1 (The Server):
+    php artisan serve
+  *Your app will be available at http://127.0.0.1:8000*
+- Terminal 2 (The Assets/CSS):
+    npm run dev
+  *This is required for Tailwind CSS and the success message colors to show up.*
 
-Terminal 1 (The Server):
-
-Bash
-php artisan serve
-Your app will be available at http://127.0.0.1:8000
-
-Terminal 2 (The Assets/CSS):
-
-Bash
-npm run dev
-This is required for Tailwind CSS and the success message colors to show up.
-
-🔑 Default Credentials (Seed Data)
-Include this in your README so your instructor doesn't have to guess how to log in:
-
-Admin: admin@example.com / password
-
-Nurse: nurse@example.com / password
-
-Student: student@example.com / password
+## 🔑 Default Credentials (Seed Data)
+- Admin: admin@example.com / password
+- Nurse: nurse@example.com / password
+- Student: student@example.com / password
