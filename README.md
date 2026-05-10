@@ -17,7 +17,6 @@ A comprehensive Laravel-based clinic management system designed for school envir
 
 ### 3. Medicine Inventory & Logs
 - **Inventory CRUD:** Full management of clinical supplies.
-- **Inventory Reconciliation:** When medicine is dispensed via the `MedicineLog`, the system automatically decrements the stock quantity.
 - **Relationships:** Complex Eloquent links between Medicines, Students, and Staff.
 
 ### 4. Administrative User Management (Admin Only)
