@@ -38,7 +38,7 @@ Ensure you have the following installed:
 - PHP (8.2 or higher)
 - Composer
 - Node.js & NPM
-- MySQL (via XAMPP, Laragon, or Docker)
+- SqLite
 
 ### 2. Clone and Install Dependencies
 Open your terminal or command prompt and run:
@@ -55,17 +55,13 @@ Open your terminal or command prompt and run:
 1. Locate the .env.example file in the root directory.
 2. Duplicate it and rename the copy to .env.
 3. Open .env and update your database credentials:
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=your_db_name
-    DB_USERNAME=root
-    DB_PASSWORD=
-4. Generate your unique application key:
+    DB_CONNECTION=sqlite
+   *Remove comment only for sqlite*
+5. Generate your unique application key:
     php artisan key:generate
 
 ### 4. Database Setup
-Ensure your MySQL server is running, then run the migrations and seeders to create the tables and default users:
+Ensure you have your SQLite database in your database folder, then run the migrations and seeders to create the tables and default users:
     php artisan migrate --seed
     
 ### 5. Launching the Application
